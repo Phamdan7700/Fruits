@@ -427,7 +427,7 @@ img {
 
 .deal-section {
   height: 80vh;
-  background-image: url("/asset/img/banner3.webp");
+  background-image: url("../img/banner3.webp");
   background-position: center;
   background-size: cover;
   padding: 60px 0;
