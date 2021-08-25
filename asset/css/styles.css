@@ -140,7 +140,7 @@ img {
 
 .navbar-nav-item {
   display: inline-block;
-  /* margin: 0 20px; */
+  margin: 0 10px;
   position: relative;
   font-size: 2rem;
   min-width: 100px;
@@ -175,6 +175,7 @@ img {
 
 .navbar-nav-link {
   display: inline-block;
+  width: 100%;
   text-decoration: none;
   position: relative;
 }
@@ -431,6 +432,7 @@ img {
   background-position: center;
   background-size: cover;
   padding: 60px 0;
+  background-attachment: fixed;
 }
 
 .deal-container {
@@ -477,9 +479,10 @@ img {
 
 /* ====================FEEDBACK==================== */
 
-.feedback {
-  text-align: center;
-  padding: 5px 20px;
+#feedback {
+ 
+  /* background: linear-gradient(to right bottom, rgba(241, 231, 140, 0.3) ,rgba(57, 100, 53, 0.466)),  url(../img/banner1.webp)  no-repeat fixed; */
+ 
 }
 
 .feedback-avatar {
