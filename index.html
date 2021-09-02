@@ -21,10 +21,11 @@
         <header class="header">
             <div class="container">
                 <nav class="navbar">
-                    <div class="navbar-logo">
-                        <a href="#">
-                            <img src="./asset/img/logo-orange.png" alt="logo" width="100" height="100">
-                        </a>
+                    <a href="#" class="navbar-logo">
+                        <img src="./asset/img/logo-orange.png" alt="logo" width="100">
+                    </a>
+                    <div class="navbar-toggle">
+                        <i class="fas fa-bars navbar-toggle-icon"></i>
                     </div>
                     <ul class="navbar-nav">
                         <li class="navbar-nav-item active">
@@ -41,9 +42,10 @@
                         </li>
                     </ul>
                     <div class="navbar-auth">
-                        <button href="#" class="navbar-auth-btn btn btn-primary ">Sign-up</button>
+                        <a href="#" class="navbar-auth-btn btn btn-primary ">Sign-up</a>
                         <a href="#" class="navbar-auth-btn btn btn-primary ">Sign-in</a>
                     </div>
+                    
                 </nav>
             </div>
 
@@ -123,19 +125,25 @@
             <div class="container">
                 <div class="library">
                     <div class="library-item">
-                        <img src="./asset/img/banner1.webp" alt="">
+                        <div class="library-item-content">
+                            <img src="./asset/img/banner1.webp" alt="">
+                        </div>
+                        <div class="library-item-content">
+                            <img src="./asset/img/banner1.webp" alt="">
+                        </div>
                     </div>
                     <div class="library-item">
-                        <img src="./asset/img/banner-shop.webp" alt="">
+                        <div class="library-item-content">
+                            <img src="./asset/img/banner-shop.webp" alt="">
+                        </div>
                     </div>
                     <div class="library-item">
-                        <img src="./asset/img/banner1.webp" alt="">
-                    </div>
-                    <div class="library-item">
-                        <img src="./asset/img/banner1.webp" alt="">
-                    </div>
-                    <div class="library-item">
-                        <img src="./asset/img/banner1.webp" alt="">
+                        <div class="library-item-content">
+                            <img src="./asset/img/banner1.webp" alt="">
+                        </div>
+                        <div class="library-item-content">
+                            <img src="./asset/img/banner1.webp" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -527,7 +535,6 @@
                 animateOut: 'animate__fadeOut',
                 animateIn: 'animate__zoomIn',
                 items: 1,
-                margin: 30,
                 smartSpeed: 450,
                 autoplay: true,
                 loop: true,
@@ -541,11 +548,9 @@
                 responsive: {
                     0: {
                         items: 1,
-                        nav: true
                     },
-                    600: {
+                    768: {
                         items: 3,
-                        nav: true,
                         dots: true
 
                     },
@@ -556,14 +561,17 @@
             // Active nav
             function handleClickNav() {
                 let navList = $('.navbar-nav-item');
-                navList.click(function() {
+                navList.click(function () {
                     navList.removeClass('active')
                     $(this).addClass('active')
                 })
             }
             handleClickNav();
-            
 
+            $('.navbar-toggle').click(function() {
+                $('.header').css('height', 'auto')
+                $('.navbar-nav , .navbar-auth').slideToggle('slow');
+            });
 
 
         });
