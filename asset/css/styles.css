@@ -213,7 +213,7 @@ img {
 }
 
 .navbar-auth-btn:hover {
-  animation: jello 1s;
+  animation: tada 1s;
 }
 
 /* ===============SLIDER============== */

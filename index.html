@@ -45,7 +45,7 @@
                         <a href="#" class="navbar-auth-btn btn btn-primary ">Sign-up</a>
                         <a href="#" class="navbar-auth-btn btn btn-primary ">Sign-in</a>
                     </div>
-                    
+
                 </nav>
             </div>
 
@@ -564,14 +564,21 @@
                 navList.click(function () {
                     navList.removeClass('active')
                     $(this).addClass('active')
+                    $('.navbar-nav , .navbar-auth').slideToggle('fast');
+
                 })
             }
             handleClickNav();
 
-            $('.navbar-toggle').click(function() {
+            $('.navbar-toggle').click(function (e) {
+                e.stopPropagation();
                 $('.header').css('height', 'auto')
                 $('.navbar-nav , .navbar-auth').slideToggle('slow');
             });
+            
+            $(document).click(function() {
+                $('.navbar-nav , .navbar-auth').slideToggle('slow');
+            })
 
 
         });
